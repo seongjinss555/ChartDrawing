@@ -1,3 +1,4 @@
+
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -26,6 +27,13 @@ export const Select = styled.select`
     width: 80%;
 `;
 
+export const ButtonContainer = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 20px;
+`
+
 export const Button = styled.button`
     padding: 10px 20px;
     border: none;
@@ -34,7 +42,7 @@ export const Button = styled.button`
     color: white;
     cursor: pointer;
     transition: background-color 0.3s;
-
+    justify-content: center;
     &:hover {
         background-color: #0056b3;
     }
