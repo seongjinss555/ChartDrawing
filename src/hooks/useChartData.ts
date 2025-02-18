@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import * as XLSX from 'xlsx';
 
 const useChartData = () => {
-    const [chartData, setChartData] = useState<{ labels: string[]; values: number[] }>({ labels: [], values: [] });
+    const [chartData, setChartData] = useState<{ labels: string[]; values: number[]; }>({ labels: [], values: []});
     const [columns, setColumns] = useState<string[]>([]);
     const [selectedLabel, setSelectedLabel] = useState<string>('');
     const [selectedValue, setSelectedValue] = useState<string>('');
@@ -32,7 +32,7 @@ const useChartData = () => {
 
         const labels = jsonData.map((row: any) => row[selectedLabel]);
         const values = jsonData.map((row: any) => row[selectedValue]);
-        setChartData({ labels, values });
+        setChartData({ labels, values});
     };
 
     return {
