@@ -6,14 +6,14 @@ export class User {
     id?: number;
 
     @Column({ unique: true })
-    email: string="";
+    email?: string;
 
     @Column({ nullable: true })
     password?: string; // 암호는 선택적
 
     @Column()
-    username: string="";
+    username?: string;
 
     @Column({ type: "datetime", default: () => "CURRENT_TIMESTAMP" })
-    createdDt: Date = new Date();
+    createdDt?: Date = new Date();
 }

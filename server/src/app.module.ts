@@ -14,7 +14,6 @@ import { User } from './user/user.entity';
       logging: true,//sql 실행 로그 확인
     }),
     UserModule,
-    
   ],
   controllers: [AppController],
   providers: [AppService],
