@@ -1,0 +1,10 @@
+### 회원 가입
+
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+    "email": "abc@abc.com",
+    "password": "1234",
+    "username": "abc"
+}

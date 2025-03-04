@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "name": "server",
   "version": "0.0.1",
   "description": "",
@@ -73,39 +72,5 @@
     ],
     "coverageDirectory": "../coverage",
     "testEnvironment": "node"
-=======
-  "name": "charjs",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@emotion/react": "^11.14.0",
-    "@emotion/styled": "^11.14.0",
-    "@mui/icons-material": "^6.4.3",
-    "@mui/material": "^6.4.3",
-    "chart.js": "^4.4.7",
-    "next": "15.1.6",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "styled-components": "^6.1.15",
-    "xlsx": "^0.18.5"
-  },
-  "devDependencies": {
-    "@eslint/eslintrc": "^3",
-    "@svgr/webpack": "^8.1.0",
-    "@types/express": "^5.0.0",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "cross-env": "^7.0.3",
-    "eslint": "^9",
-    "eslint-config-next": "15.1.6",
-    "typescript": "^5"
->>>>>>> bb1113334342c2643c5e22948e2411cbcccaf638
   }
 }

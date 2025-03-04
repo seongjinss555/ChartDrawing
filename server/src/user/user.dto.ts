@@ -1,22 +1,20 @@
-import { IsEmail, IsString } from "class-validator";    
+export type CreateUserDto = {
+    email: string; // 필수
+    password: string; // 필수
+    username?: string; // 선택적
+};
 
-//email, password, username field 생성
-export class CreateUserDto {
-    @IsEmail()
-    email?: string;
+export type UpdateUserDto = {
+    username?: string; // 선택적
+    password?: string; // 선택적
+};
 
-    @IsString()
-    password?: string;
-
-    @IsString()
-    username?: string;
-}
-
-//update 유효성 검증 시 사용할 dto
-export class UpdateUserDto{
-    @IsString()
-    username?: string;
-
-    @IsString()
-    password?: string;
+// 유효성 검증 함수
+export function validateCreateUserDto(dto: CreateUserDto): void {
+    if (!dto.email) {
+        throw new Error("Email is required");
+    }
+    if (!dto.password) {
+        throw new Error("Password is required");
+    }
 }
