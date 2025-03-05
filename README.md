@@ -19,5 +19,5 @@ CSS : ![Styled Components](https://img.shields.io/badge/styled--components-DB709
 ![Chart.js](https://img.shields.io/badge/chart.js-F5788D.svg?style=for-the-badge&logo=chart.js&logoColor=white)
 
 ## 주요 기능
-사용자가 엑셀 파일을 업로드 하면 그 엑셀 파일을 json 데이터로 파싱하여 배열 상태로 변환 후 해당 데이터들을 차트화
+사용자가 엑셀 파일을 업로드 하면 그 엑셀 파일을 json 데이터로 파싱하여 배열 상태로 변환 후 해당 데이터들을 차트화하여 사용자에게 도움을 준다
 
