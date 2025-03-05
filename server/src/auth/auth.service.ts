@@ -30,4 +30,24 @@ export class AuthService {
             throw new HttpException('서버 에러',500);
         }
     }
+
+    async validateUser(email: string, password: string) {
+        const user = await this.userService.getUser(email); // email로 사용자 조회
+    
+        if (!user) {
+            return null; // 사용자가 없으면 null 반환
+        }
+        const { password: hashedPassword, ...userInfo } = user; // password 따로 뽑아냄
+        // hashedPassword가 유효한지 확인
+        if (!hashedPassword) {
+            throw new Error('유효한 비밀번호가 아닙니다.'); // 비밀번호가 없을 경우 에러 처리
+        }
+        // 비밀번호 검증
+        if (bcrypt.compareSync(password, hashedPassword)) {
+            return userInfo; // 비밀번호가 일치하면 사용자 정보 반환
+        }
+    
+        return null; // 비밀번호 불일치
+    }
+    
 }

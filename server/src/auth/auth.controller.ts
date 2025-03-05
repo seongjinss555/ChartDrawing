@@ -1,13 +1,19 @@
-import { Controller, Body, Get, Post } from '@nestjs/common';
-import { CreateUserDto} from '../user/user.dto';
-import {AuthService} from './auth.service';
+import { Controller, Get, UseGuards, Res, Req } from '@nestjs/common';
+import { GoogleAuthGuard } from './auth.guard'; // GoogleAuthGuard 경로 확인
+import { Request, Response } from 'express';
 
 @Controller('auth')
 export class AuthController {
-    constructor(private authService: AuthService){} // AuthService 주입받음
+    @UseGuards(GoogleAuthGuard)
+    @Get('to-google')
+    async googleAuth(@Req() req: Request) {
+        // 필요한 로직 추가
+    }
 
-    @Post('register')
-    async register(@Body() userDto: CreateUserDto){
-        return await this.authService.register(userDto);
+    @UseGuards(GoogleAuthGuard)
+    @Get('google')
+    async googleAuthRedirect(@Req() req: Request, @Res() res: Response) {
+        const {user} = req;
+        return res.send(user); 
     }
 }
